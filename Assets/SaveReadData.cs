@@ -77,7 +77,8 @@ public class SaveReadData : MonoBehaviour
 
     public void BackLevels()
     {
-        SceneManager.LoadScene("Level 1");
+        if (idCharacter == 4) SceneManager.LoadScene("Game Over");
+        else SceneManager.LoadScene("Level 1");
     }
 
     public void CheckIfData()
@@ -197,7 +198,11 @@ public class SaveReadData : MonoBehaviour
 
     public void FinishedLevel()
     {
-        if (level == 5) SceneManager.LoadScene("Win");
-        else SceneManager.LoadScene("Level " + (level + 2));
+        if (level == 4)
+        {
+            PlayerPrefs.DeleteAll();
+            SceneManager.LoadScene("Win");
+        }
+        else if (idCharacter < 4) SceneManager.LoadScene("Level " + (level + 2));
     }
 }

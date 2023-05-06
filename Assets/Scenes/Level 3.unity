@@ -598,8 +598,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "SALT\xC1 CON ESPACIO"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -688,7 +688,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1205,7 +1205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695167803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.47, y: -3.15, z: 0}
+  m_LocalPosition: {x: 2.47, y: -3.15, z: 2}
   m_LocalScale: {x: 0.123137794, y: 0.123137794, z: 0.123137794}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1602,7 +1602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &745396943
 Transform:
   m_ObjectHideFlags: 0
@@ -1717,6 +1717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869964980}
   - component: {fileID: 869964981}
+  - component: {fileID: 869964982}
   m_Layer: 0
   m_Name: Level_3
   m_TagString: Untagged
@@ -1754,6 +1755,32 @@ MonoBehaviour:
   secondPart: {fileID: 745396942}
   player: {fileID: 2093474210}
   blackScreen: {fileID: 1031063835}
+--- !u!61 &869964982
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869964979}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 7.783167, y: -1.3591928}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5451903, y: 7.438282}
+  m_EdgeRadius: 0
 --- !u!1 &883990982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,7 +2520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316722609}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -3.84, z: 10}
+  m_LocalPosition: {x: 1.05, y: -4.53, z: 10}
   m_LocalScale: {x: 0.15161055, y: 0.15161055, z: 0.15161055}
   m_ConstrainProportionsScale: 0
   m_Children: []
