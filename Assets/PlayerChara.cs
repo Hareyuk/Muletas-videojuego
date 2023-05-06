@@ -66,8 +66,8 @@ public class PlayerChara : MonoBehaviour
             changeAnimation = false;
             if (isIdle) anim.Play("idle");
             if (isWalking) anim.Play("walk");
-            if (isJumping) anim.Play("jumping");
-            if (isFalling) anim.Play("falling");
+            if (isJumping) anim.Play("jump");
+            if (isFalling) anim.Play("fall");
             if (isGhost)
             {
                 anim.Play("ghost");

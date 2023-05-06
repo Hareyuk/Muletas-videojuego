@@ -126,7 +126,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.7333333
-    functionName: FinishLevel
+    functionName: DiedPlayer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

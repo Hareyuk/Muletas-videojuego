@@ -69,6 +69,7 @@ public class SaveReadData : MonoBehaviour
         PlayerChara player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerChara>();
         charas_positions_deaths[idCharacter] = player.transform.position;
         player.Die();
+        idCharacter++;
         SaveData();
         Animation animScreen = blackScreen.GetComponent<Animation>();
         animScreen.Play("in_fade_death");
@@ -113,7 +114,7 @@ public class SaveReadData : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            charas_positions_deaths[i] = new Vector2(PlayerPrefs.GetInt("death_"+i+"_x"), PlayerPrefs.GetInt("death_" + i + "_y"));
+            charas_positions_deaths[i] = new Vector2(PlayerPrefs.GetFloat("death_"+i+"_x"), PlayerPrefs.GetFloat("death_" + i + "_y"));
         }
     }
 
@@ -135,10 +136,11 @@ public class SaveReadData : MonoBehaviour
             PlayerPrefs.SetInt("death_" + i + "_level", where_deaths[i]);
         }
         //Pos X and Y of characters 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 4; i++)
         {
             float posX = charas_positions_deaths[i].x;
             float posY = charas_positions_deaths[i].y;
+            print("posX: " + posX + " - posY: " + posY);
             PlayerPrefs.SetFloat("death_" + i + "_x", posX);
             PlayerPrefs.SetFloat("death_" + i + "_y", posY);
         }
@@ -196,6 +198,6 @@ public class SaveReadData : MonoBehaviour
     public void FinishedLevel()
     {
         if (level == 5) SceneManager.LoadScene("Win");
-        else SceneManager.LoadScene("Level " + (level + 1));
+        else SceneManager.LoadScene("Level " + (level + 2));
     }
 }

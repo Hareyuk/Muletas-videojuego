@@ -167,16 +167,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93ed03387ca29a48839b15b02b064a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 5
+  level: 4
   idCharacter: -1
+  restartData: 0
   charas_deaths: 0000000000
   where_deaths: ffffffffffffffffffffffffffffffffffffffff
-  charas_positions:
+  charas_positions_deaths:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
+  organizeLevels: {fileID: 0}
+  tombsPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  blackScreen: {fileID: 0}
 --- !u!1 &481400114
 GameObject:
   m_ObjectHideFlags: 0
