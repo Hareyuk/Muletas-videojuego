@@ -95,7 +95,7 @@ public class PlayerChara : MonoBehaviour
                 }
                 /*Vector2 newPos = new Vector2(rb.position.x + (direction * speed * Time.deltaTime), rb.position.y);
                 rb.MovePosition(newPos);*/
-                rb.velocity= new Vector2(speed * direction,0);
+                rb.velocity= new Vector2(speed * direction,rb.velocity.y);
                 if(isIdle && direction != 0)
                 {
                     isIdle = false;
@@ -110,6 +110,25 @@ public class PlayerChara : MonoBehaviour
                     changeAnimation = true;
                     currentState = 0;
                 }
+            }
+
+            if(isIdle || isWalking)
+            {
+                if(Input.GetKeyDown(KeyCode.Space) && canJumpLevel)
+                {
+                    isIdle = false;
+                    isWalking = false;
+                    isJumping = true;
+                    changeAnimation = true;
+                    rb.velocity = new Vector2(rb.velocity.x, speedJump);
+                }
+            }
+
+            if(isJumping && rb.velocity.y <= 0)
+            {
+                isJumping = false;
+                isFalling = true;
+                changeAnimation = true;
             }
         }
     }
@@ -143,6 +162,7 @@ public class PlayerChara : MonoBehaviour
         {
             isInFloor = false;
             isWalking = false;
+            isIdle = false;
             if (!isJumping) isFalling = true;
             changeAnimation = true;
         }

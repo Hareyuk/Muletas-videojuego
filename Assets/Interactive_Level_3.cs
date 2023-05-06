@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class Interactive_Level_3 : MonoBehaviour
 {
-    public GameObject firstPart;
     public GameObject secondPart;
-    public bool cars = false;
-    public bool hole = false;
+    public PlayerChara player;
+    public GameObject blackScreen;
     public void StartEvent(float idPlayer)
     {
-        if(idPlayer == 0) //first time, cars
+        if(idPlayer > 0) //Not first life
         {
-            cars = true;
+            secondPart.SetActive(true);
+            player.canJumpLevel = true;
         }
-        else //Jump trough the hole
+        else
         {
-            hole = true;
+            player.canJumpLevel = false;
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.name == "Penguin")
+        {
+            Animation animScreen = blackScreen.GetComponent<Animation>();
+            animScreen.Play("in_fade");
+        }
     }
 }
