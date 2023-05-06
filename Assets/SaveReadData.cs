@@ -16,7 +16,15 @@ public class SaveReadData : MonoBehaviour
     public GameObject organizeLevels;
     public GameObject[] tombsPlayers = new GameObject[4] { null, null, null,null };
     public GameObject blackScreen;
-    
+    /*
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            CharacterDead();
+        }
+    }*/
+
     void Awake()
     {
         CheckIfData();
@@ -77,8 +85,13 @@ public class SaveReadData : MonoBehaviour
 
     public void BackLevels()
     {
-        if (idCharacter == 4) SceneManager.LoadScene("Game Over");
-        else SceneManager.LoadScene("Level 1");
+        //print("ID de character: " + idCharacter);
+        if (idCharacter == 5)
+        {
+            PlayerPrefs.DeleteAll();
+            SceneManager.LoadScene("Game Over");
+        }
+        else if(idCharacter < 5) SceneManager.LoadScene("Level 1");
     }
 
     public void CheckIfData()
@@ -92,7 +105,7 @@ public class SaveReadData : MonoBehaviour
         }
         else
         {
-            print("No existe dato");
+            //print("No existe dato");
             CreateData();
         }
     }
@@ -141,7 +154,7 @@ public class SaveReadData : MonoBehaviour
         {
             float posX = charas_positions_deaths[i].x;
             float posY = charas_positions_deaths[i].y;
-            print("posX: " + posX + " - posY: " + posY);
+            //print("posX: " + posX + " - posY: " + posY);
             PlayerPrefs.SetFloat("death_" + i + "_x", posX);
             PlayerPrefs.SetFloat("death_" + i + "_y", posY);
         }

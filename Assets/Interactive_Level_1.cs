@@ -24,12 +24,12 @@ public class Interactive_Level_1 : MonoBehaviour
             target.canInteractue = false;
             Animation animScreen = blackScreen.GetComponent<Animation>();
             animScreen.Play("in_fade");
+            this.GetComponent<soundManager>().PlaySound("door");
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision.gameObject.name);
         if(collision.gameObject == target.gameObject)
         {
             showKeys.SetActive(true);
