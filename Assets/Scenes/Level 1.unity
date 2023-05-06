@@ -771,12 +771,12 @@ GameObject:
   - component: {fileID: 848229610}
   - component: {fileID: 848229612}
   - component: {fileID: 848229611}
-  - component: {fileID: 848229614}
   - component: {fileID: 848229613}
+  - component: {fileID: 848229614}
   m_Layer: 0
   m_Name: ZoneDoor
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -872,7 +872,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 0.87
+  DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0

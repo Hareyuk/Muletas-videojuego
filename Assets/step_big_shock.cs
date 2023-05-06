@@ -8,6 +8,7 @@ public class step_big_shock : MonoBehaviour
     public GameObject cloud;
     bool startToTime = false;
     float timer = 0;
+    bool startedSound = false;
     private void Update()
     {
         if (startToTime)
@@ -18,6 +19,11 @@ public class step_big_shock : MonoBehaviour
             if (timer > 0.75f) cloud.SetActive(false);
             if (timer > 1f) cloud.SetActive(true);
             if (timer > 1f) rayo.SetActive(true);
+            if(!startedSound)
+            {
+                startedSound = true;
+                this.GetComponent<soundManager>().PlaySound("strong_light");
+            }
             if (timer > 1.3f) cloud.SetActive(false);
             if (timer > 1.3f) rayo.SetActive(false);
             timer += Time.deltaTime;

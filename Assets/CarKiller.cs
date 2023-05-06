@@ -22,4 +22,10 @@ public class CarKiller : MonoBehaviour
             anim.Play("death_player_3");
         }
     }
+
+    public void playSoundCar()
+    {
+
+        this.GetComponent<soundManager>().PlaySound("car");
+    }
 }

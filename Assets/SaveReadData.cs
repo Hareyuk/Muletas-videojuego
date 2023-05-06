@@ -216,6 +216,6 @@ public class SaveReadData : MonoBehaviour
             PlayerPrefs.DeleteAll();
             SceneManager.LoadScene("Win");
         }
-        else if (idCharacter < 4) SceneManager.LoadScene("Level " + (level + 2));
+        else if (idCharacter < 5) SceneManager.LoadScene("Level " + (level + 2));
     }
 }

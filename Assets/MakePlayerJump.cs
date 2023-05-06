@@ -8,6 +8,7 @@ public class MakePlayerJump : MonoBehaviour
     {
         if (collision.name == "Penguin")
         {
+            this.GetComponent<soundManager>().PlaySound("jumping");
             Rigidbody2D rbPlayer = collision.GetComponent<Rigidbody2D>();
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, 20);
         }

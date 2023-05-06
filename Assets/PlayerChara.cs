@@ -58,9 +58,19 @@ public class PlayerChara : MonoBehaviour
     {
     }
 
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+
         if(changeAnimation)
         {
             changeAnimation = false;

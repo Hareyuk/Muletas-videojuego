@@ -33,6 +33,7 @@ public class FireTree : MonoBehaviour
     {
         if(collision.name == "Penguin")
         {
+            if (!startToTime) this.GetComponent<soundManager>().PlaySound("weak_light");
             startToTime = true;
         }
     }
